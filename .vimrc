@@ -13,6 +13,7 @@ Plug 'morhetz/gruvbox'
 Plug 'itchyny/lightline.vim'
 Plug 'ap/vim-buftabline'
 Plug 'scrooloose/nerdtree'
+Plug 'mattn/emmet-vim'
 
 call plug#end()
 
