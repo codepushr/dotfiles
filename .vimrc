@@ -6,6 +6,7 @@ Plug 'Valloric/YouCompleteMe', {'do': './install.py --all'}
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'fatih/vim-go'
 Plug 'SirVer/ultisnips'
+Plug 'mileszs/ack.vim'
 Plug 'othree/html5.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'tomtom/tcomment_vim'
@@ -53,6 +54,7 @@ if has("gui_running")
 endif
 
 " Defaults
+let g:ackprg = 'ag --vimgrep'
 set number
 set showcmd
 set noswapfile
@@ -90,10 +92,11 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 nnoremap n nzzzv
 nnoremap N Nzzzv
+nnoremap <leader>g :Ack 
 nnoremap <leader>w :w!<CR>
 nnoremap <leader>q :bp\|bd #<CR>            " Close buffer unless last
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
-noremap <leader>i mzgg=G`z                  " Reindent
+
 
 " File types
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
@@ -102,8 +105,8 @@ autocmd BufNewFile,BufRead *.html setlocal noexpandtab tabstop=2 shiftwidth=2 so
 
 " Quickfix
 nnoremap <leader>a :cclose<CR>
-map <C-n> :cn<CR>
-map <C-p> :cp<CR>
+map <C-n> :cn<CR>zz
+map <C-p> :cp<CR>zz
 
 " CtrlP
 map <Leader>j :CtrlPBuffer<cr>
@@ -230,6 +233,6 @@ endfunction
 
 " BufTabLine
 set hidden
-nnoremap <C-N> :bnext<CR>
-nnoremap <C-P> :bprev<CR>
+nnoremap <S-l> :bnext<CR>
+nnoremap <S-h> :bprev<CR>
 
