@@ -1,1 +1,0 @@
-/Users/palic/Library/Mobile Documents/com~apple~CloudDocs/Dotfiles/.bash_profile
