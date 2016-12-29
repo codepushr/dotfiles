@@ -1,0 +1,8 @@
+# MacOS
+.DS_Store
+.Spotlight-V100
+.Trashes
+
+# Nvim
+.xterm-256color.ti
+
