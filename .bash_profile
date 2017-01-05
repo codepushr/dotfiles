@@ -8,6 +8,9 @@ alias ls="ls -la"
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 
+# Postgres app
+export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
+
 # Vim (from Brew)
 alias vim=/usr/local/bin/vim
 
@@ -25,6 +28,6 @@ infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > ~/.$TERM.ti
 tic ~/.$TERM.ti
 
 # Docker
-if [ $(which docker-machine) != "" ]; then
-    eval $(docker-machine env default)
-fi
+alias docker-init='eval $(docker-machine env default)'
+alias docker-rmia='docker images -q --filter "dangling=true" | xargs docker rmi'
+
