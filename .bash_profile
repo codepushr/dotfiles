@@ -30,4 +30,5 @@ tic ~/.$TERM.ti
 # Docker
 alias docker-init='eval $(docker-machine env default)'
 alias docker-rmia='docker images -q --filter "dangling=true" | xargs docker rmi'
+alias docker-ip='docker-machine ip default'
 
