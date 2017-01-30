@@ -15,6 +15,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'ap/vim-buftabline'
 Plug 'scrooloose/nerdtree'
 Plug 'mattn/emmet-vim'
+Plug 'hashivim/vim-terraform'
 
 call plug#end()
 
