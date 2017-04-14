@@ -105,6 +105,8 @@ autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 soft
 autocmd BufNewFile,BufRead *.js setlocal noexpandtab tabstop=2 shiftwidth=2 softtabstop=2
 autocmd BufNewFile,BufRead *.tmpl setlocal noexpandtab tabstop=2 shiftwidth=2 softtabstop=2
 autocmd BufNewFile,BufRead *.html setlocal noexpandtab tabstop=2 shiftwidth=2 softtabstop=2
+autocmd BufNewFile,BufRead *.less setlocal noexpandtab tabstop=2 shiftwidth=2 softtabstop=2
+autocmd BufNewFile,BufRead *.css setlocal noexpandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 " Quickfix
 nnoremap <leader>a :cclose<CR>
