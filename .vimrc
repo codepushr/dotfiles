@@ -102,11 +102,11 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 " File types
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
-autocmd BufNewFile,BufRead *.js setlocal noexpandtab tabstop=2 shiftwidth=2 softtabstop=2
-autocmd BufNewFile,BufRead *.tmpl setlocal noexpandtab tabstop=2 shiftwidth=2 softtabstop=2
-autocmd BufNewFile,BufRead *.html setlocal noexpandtab tabstop=2 shiftwidth=2 softtabstop=2
-autocmd BufNewFile,BufRead *.less setlocal noexpandtab tabstop=2 shiftwidth=2 softtabstop=2
-autocmd BufNewFile,BufRead *.css setlocal noexpandtab tabstop=2 shiftwidth=2 softtabstop=2
+autocmd BufNewFile,BufRead *.js setlocal expandtab tabstop=4 shiftwidth=2 softtabstop=0
+autocmd BufNewFile,BufRead *.tmpl setlocal expandtab tabstop=4 shiftwidth=2 softtabstop=0
+autocmd BufNewFile,BufRead *.html setlocal expandtab tabstop=4 shiftwidth=2 softtabstop=0
+autocmd BufNewFile,BufRead *.less setlocal expandtab tabstop=4 shiftwidth=2 softtabstop=0
+autocmd BufNewFile,BufRead *.css setlocal expandtab tabstop=4 shiftwidth=2 softtabstop=0
 
 " Quickfix
 nnoremap <leader>a :cclose<CR>
