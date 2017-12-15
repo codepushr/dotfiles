@@ -18,29 +18,13 @@ Plug 'hashivim/vim-terraform'
 call plug#end()
 
 " Settings ------------------------------
-let mapleader=","
+set nocompatible
+filetype off
+filetype plugin indent on
 
-if !has('nvim')
-    set nocompatible
-    filetype off
-    filetype plugin indent on
-
-    set ttyfast
-    set ttymouse=xterm2
-    set ttyscroll=3
-
-    set laststatus=2
-    set encoding=utf-8
-    set autoread
-    set autoindent
-    set backspace=indent,eol,start
-    set hlsearch
-    set mouse=a
-
-    syntax enable
-    set t_Co=256
-    set term=ansi
-endif
+set ttyfast
+set ttymouse=xterm2
+set ttyscroll=3
 
 " Gui
 set guioptions-=r
@@ -53,7 +37,15 @@ if has("gui_running")
 endif
 
 " Defaults
-let g:ackprg = 'ag --vimgrep'
+set laststatus=2
+set encoding=utf-8
+set autoread
+set autoindent
+set backspace=indent,eol,start
+set incsearch
+set hlsearch
+set mouse=a
+set noerrorbells
 set number
 set showcmd
 set noswapfile
@@ -63,26 +55,32 @@ set splitbelow
 set autowrite
 set hidden
 set fileformats=unix,dos,mac
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set expandtab
+set noshowmatch
 set noshowmode
+set ignorecase
+set smartcase
 set completeopt=menu,menuone
 set nocursorcolumn
 set nocursorline
-set colorcolumn=80
-set updatetime=400
+set updatetime=300
 set pumheight=10
-set clipboard^=unnamed
-set clipboard^=unnamedplus
 set viminfo='200
 set lazyredraw
 set list listchars=tab:▸\ ,trail:·,eol:¬,precedes:←,extends:→
+
+syntax enable
+set t_Co=256
+let g:rehash256=1
 set background=dark
+let g:molokai_original=1
 colorscheme gruvbox
 
+" Clipboard
+set clipboard^=unnamed
+set clipboard^=unnamedplus
+
 " Mappings
+let mapleader=","
 nnoremap <leader><space> :nohlsearch<CR>    " Turn off search highlights
 nnoremap <leader>o :only<CR>                " Close all other windows
 map <C-j> <C-W>j
